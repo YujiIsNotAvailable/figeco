@@ -16,6 +16,7 @@ class Client implements ClientInterface
 
     public function request(Uri $uri): Response
     {
+        /** add exception handler. */
         return new Response(file_get_contents((string)$uri));
     }
 }
